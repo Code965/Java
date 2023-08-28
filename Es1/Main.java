@@ -6,7 +6,7 @@ public class Main{
 
         Promoter admin = new Promoter("Domenico", "Giannone", "M", "14/10/1997", "domi19@libero.it", 1);
         int scelta;
-        String nome,nome2,cognome,sesso,dataNascita,email;
+        String nome,nome2,cognome,sesso,dataNascita,email, codice;
         Scanner Scanner = new Scanner(System.in);
         boolean loop = true;
 
@@ -34,7 +34,9 @@ public class Main{
                 case 2:
                     System.out.println("Buogniorno, sei il cliente?");
                     nome2 = Scanner.next();
-                    admin.validaSpendiBuono(nome2);
+                    System.out.println("inserisci il codice sconto");
+                    codice = Scanner.next();
+                    admin.validaSpendiBuono(nome2,codice);
                 break;
 
                 case 3:

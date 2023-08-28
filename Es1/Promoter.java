@@ -65,13 +65,14 @@ public class Promoter extends Persona{
         }
     }
 
-    public void validaSpendiBuono(String nome){
+    public void validaSpendiBuono(String nome, String codice){
        
         for (Cliente cliente : cassa) {
 
-             if(cliente.getNome().equals(nome)){
+             if(cliente.getNome().equals(nome) && cliente.getCodiceSconto().equals(codice)){
 
                 if(cliente.getUsato() == true){
+
                     System.out.println("Sto applicando lo sconto");
                     cliente.setUsato(false);
                     cliente.setCodiceSconto(" ");
