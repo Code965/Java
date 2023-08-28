@@ -56,7 +56,7 @@ public class Promoter extends Persona{
 
         }catch(Exception ext){
             ext.printStackTrace();
-        }
+        } 
     }
 
     public void stampaClienti(){

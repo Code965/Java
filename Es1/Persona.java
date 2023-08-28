@@ -52,7 +52,7 @@ public class Persona{
         return this.sesso;
     }
 
-    public String getEmail(){
+    public String getEmail(){ 
         return this.email;
     }   
 

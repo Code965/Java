@@ -37,7 +37,7 @@ public class Main{
                     System.out.println("inserisci il codice sconto");
                     codice = Scanner.next();
                     admin.validaSpendiBuono(nome2,codice);
-                break;
+                break; 
 
                 case 3:
                     admin.stampaUtentiBuono();

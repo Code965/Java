@@ -18,7 +18,7 @@ public class Cliente extends Persona{
     }
 
     public void setUsato(boolean usato){
-        this.usato = usato;
+        this.usato = usato; 
     }
 
     public boolean getUsato(){
