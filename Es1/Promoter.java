@@ -4,9 +4,10 @@ import java.util.*;
 public class Promoter extends Persona{
 
     ArrayList<Cliente> cassa = new ArrayList<Cliente>(); //mi aggiunge clienti alla cassa
-    Scanner sc = new Scanner(System.in);
+    Scanner Scanner = new Scanner(System.in);
 
     private int cod_promoter;
+    String codice;
 
     public Promoter(String nome,String cognome,String sesso,String dataNascita, String email, int cod_promoter){
         super(nome,cognome,sesso,dataNascita,email);
@@ -53,7 +54,6 @@ public class Promoter extends Persona{
             Cliente prs1 = new Cliente(nome, cognome, sesso, dataNascita, email, codice_sconto, false);
             prs1.setUsato(true);
             cassa.add(prs1);
-
         }catch(Exception ext){
             ext.printStackTrace();
         } 
@@ -65,23 +65,23 @@ public class Promoter extends Persona{
         }
     }
 
-    public void validaSpendiBuono(String nome, String codice){
+    public void validaSpendiBuono(String nome){
        
         for (Cliente cliente : cassa) {
 
-             if(cliente.getNome().equals(nome) && cliente.getCodiceSconto().equals(codice)){
+            if( cliente.getNome().equals(nome)){
+                System.out.println("benvenuto" + cliente.getNome());
 
-                if(cliente.getUsato() == true){
+                System.out.println("inserisci il tuo codice sconto");
+                codice = Scanner.next();
+                if( cliente.getCodiceSconto().equals(codice) && cliente.getUsato() == true){
 
-                    System.out.println("Sto applicando lo sconto");
-                    cliente.setUsato(false);
-                    cliente.setCodiceSconto(" ");
-                    break;
-                }
-             }else{
-                System.out.println("Utente non trovato");
-                break;
-             }
+                     System.out.println("Sto applicando lo sconto");
+                     cliente.setUsato(false);
+                     cliente.setCodiceSconto(" ");
+                     break;
+                } 
+            }
             
         }
     }

@@ -34,9 +34,8 @@ public class Main{
                 case 2:
                     System.out.println("Buogniorno, sei il cliente?");
                     nome2 = Scanner.next();
-                    System.out.println("inserisci il codice sconto");
-                    codice = Scanner.next();
-                    admin.validaSpendiBuono(nome2,codice);
+                   
+                    admin.validaSpendiBuono(nome2);
                 break; 
 
                 case 3:
