@@ -13,7 +13,7 @@ public class Main{
         while(loop){
 
             System.out.println("Cosa vuoi fare?" );
-            System.out.println("1 - INSERISCI UN CLIENTE, 2 - VALIDA/SPENDI BUONO 3 - STAMPA I CONTATI CHE HANNO USATO IL BUONO 4 - STAMPA TOTALE 5 - STAMPA TUTTO  6- ESCI");
+            System.out.println("1 - INSERISCI UN CLIENTE, 2 - VALIDA/SPENDI BUONO 3 - STAMPA I CONTATTI CHE HANNO USATO IL BUONO 4 - STAMPA TOTALE 5 - STAMPA TUTTO  6- ESCI");
             
             scelta = Scanner.nextInt();
 
@@ -25,14 +25,14 @@ public class Main{
                     cognome = Scanner.next();
                     System.out.println("inserisci il sesso");
                     sesso = Scanner.next();
-                    System.out.println("inserisci il data nascita");
+                    System.out.println("inserisci la data nascita");
                     dataNascita = Scanner.next();
-                    System.out.println("inserisci il email");
+                    System.out.println("inserisci l'email");
                     email = Scanner.next();
                     admin.inserisciCliente(nome,cognome,sesso,dataNascita,email);
                 break;
                 case 2:
-                    System.out.println("Buogniorno, sei il cliente?");
+                    System.out.println("Buongiorno, sei il cliente?");
                     nome2 = Scanner.next();
                    
                     admin.validaSpendiBuono(nome2);
